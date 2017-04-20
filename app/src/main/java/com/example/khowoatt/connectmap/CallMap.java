@@ -26,7 +26,7 @@ public class CallMap extends AppCompatActivity {//Main Method
         String lat = latitude.getText().toString().trim();//แปลงค่าจาก EditText เป็น String, trim คือการตัดช่องว่างเวลาพิมแล้วนำมาเก็บข้อมูล
         String lng = longtitude.getText().toString().trim();
         String mlabal = labal.getText().toString().trim();
-        Uri Location = Uri.parse("http://maps.google.com/maps?z=10&q=loc:13.759491,100.541522 (ศูนย์รางน้ำ)");
+        Uri Location = Uri.parse("http://maps.google.com/maps?q=loc:"+lat+","+lng+"("+mlabal+")");
 
         Intent mapIntent= new Intent(Intent.ACTION_VIEW,Location);
         //mapIntent.setPackage("com.google.android.apps.maps");//set เพื่อให้ใช้ google map โดยตรง ถ้าในเครื่องมีแอพแมพหลายตัว , ใช้เทสด้วย Genymotion ไม่ได้
